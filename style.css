@@ -1,0 +1,360 @@
+/* ===================================================
+   PORTFOLIO — style.css
+   Brand: ledger / receipt identity
+   Change the values in :root and the whole site updates —
+   you never need to touch a hex code below this block.
+=================================================== */
+
+:root {
+  /* -- brand palette (your existing product identity) -- */
+  --color-primary: #1F6F54;   /* deep emerald */
+  --color-accent:  #C89B3C;   /* warm gold */
+  --color-bg:      #FAFAF7;   /* paper white */
+  --color-ink:     #1C2321;   /* near-black text */
+
+  /* -- supporting neutrals: added for hierarchy only, not new brand colors -- */
+  --color-ink-muted: #5C6560;  /* secondary text, e.g. taglines */
+  --color-line:       #E1DDD1; /* hairlines, dividers, borders */
+  --color-card-bg:    #FFFFFF; /* project cards sit slightly lighter than bg */
+
+  /* -- type -- */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* -- layout -- */
+  --max-width: 1080px;
+  --header-height: 72px;
+}
+
+/* ---------- reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height); /* keeps sticky header from covering the section title after a jump */
+}
+
+body, h1, h2, h3, p { margin: 0; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* ---------- shared width container ---------- */
+.section-inner, .hero-inner, .header-inner {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* ---------- header / nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 250, 247, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.header-inner {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-ink);
+}
+.logo-dot { color: var(--color-accent); }
+
+.nav-desktop {
+  display: none; /* shown at 768px+, see media query below */
+  gap: 32px;
+  align-items: center;
+  font-size: 0.95rem;
+}
+.nav-desktop a { position: relative; padding-block: 4px; }
+.nav-desktop a:not(.nav-cta)::after {
+  content: '';
+  position: absolute; left: 0; bottom: 0;
+  width: 100%; height: 1px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.nav-desktop a:not(.nav-cta):hover::after { transform: scaleX(1); }
+
+.nav-cta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--color-ink);
+  padding: 8px 16px;
+  border-radius: 3px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.nav-cta:hover { background: var(--color-ink); color: var(--color-bg); }
+
+/* hamburger — mobile only */
+.nav-toggle {
+  display: flex; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 8px;
+}
+.nav-toggle span { width: 22px; height: 2px; background: var(--color-ink); transition: transform 0.25s ease, opacity 0.25s ease; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-mobile {
+  display: flex; flex-direction: column;
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease;
+  border-top: 1px solid var(--color-line);
+}
+.nav-mobile.open { max-height: 300px; }
+.nav-mobile a { padding: 16px 24px; border-bottom: 1px solid var(--color-line); font-size: 0.95rem; }
+
+@media (min-width: 768px) {
+  .nav-desktop { display: flex; }
+  .nav-toggle { display: none; }
+  .nav-mobile { display: none; }
+}
+
+/* ---------- hero (the one bold moment) ---------- */
+.hero {
+  position: relative;
+  padding-block: 96px 64px;
+  background-color: var(--color-bg);
+  /* faint dot grain in emerald — reads as paper texture, not a pattern */
+  background-image: radial-gradient(rgba(31, 111, 84, 0.06) 1px, transparent 1px);
+  background-size: 18px 18px;
+  background-position: -9px -9px;
+}
+
+.hero-inner { text-align: center; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.75rem, 8vw, 5rem);
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.hero-tagline {
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  color: var(--color-ink-muted);
+  max-width: 34ch;
+  margin-inline: auto;
+  margin-bottom: 36px;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  padding: 14px 28px;
+  border-radius: 3px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  box-shadow: 3px 3px 0 var(--color-accent); /* stamped-receipt feel, not a soft drop shadow */
+}
+.btn-primary:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--color-accent); }
+.btn-primary:active { transform: translate(0, 0); box-shadow: 1px 1px 0 var(--color-accent); }
+
+/* perforated "tear line" under the hero — the receipt motif, used once */
+.hero-divider {
+  height: 3px;
+  margin-top: 56px;
+  background-image: radial-gradient(circle, var(--color-line) 1.5px, transparent 1.6px);
+  background-size: 12px 100%;
+  background-repeat: repeat-x;
+}
+
+/* ---------- shared section styling (about / projects / skills / contact) ---------- */
+.about, .projects, .skills, .contact {
+  padding-block: 64px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.section-label {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.line-no {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-accent);
+}
+.section-label h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+.rule {
+  flex: 1;
+  height: 1px;
+  background: var(--color-line);
+}
+
+.about-text {
+  font-size: 1.05rem;
+  max-width: 62ch;
+}
+
+/* ---------- projects ---------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 640px) {
+  .project-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.project-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.project-card:hover {
+  box-shadow: 4px 4px 0 var(--color-line);
+  transform: translateY(-2px);
+}
+
+.project-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.project-desc {
+  color: var(--color-ink-muted);
+  font-size: 0.95rem;
+}
+
+/* tag pills — shared by project cards and the skills list */
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+}
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--color-primary);
+  background: rgba(31, 111, 84, 0.07);
+  border: 1px solid rgba(31, 111, 84, 0.2);
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.skills-list { margin-top: 4px; }
+.skills-list .tag { font-size: 0.8rem; }
+
+.project-links {
+  display: flex;
+  gap: 20px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+.project-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-ink);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.project-link:hover { color: var(--color-primary); border-color: var(--color-primary); }
+.project-link-disabled {
+  color: var(--color-ink-muted);
+  border-color: var(--color-line);
+  pointer-events: none; /* placeholder card — not clickable until real links go in */
+}
+
+/* ---------- contact ---------- */
+.contact-line {
+  font-size: 1.05rem;
+  color: var(--color-ink-muted);
+  margin-bottom: 28px;
+  max-width: 50ch;
+}
+.contact-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--color-ink);
+  border-radius: 3px;
+  padding: 12px 18px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.contact-btn:hover { background: var(--color-ink); color: var(--color-bg); }
+.contact-icon {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.9rem;
+  width: 22px;
+  text-align: center;
+}
+.contact-label {
+  font-size: 0.9rem;
+}
+
+/* ---------- footer ---------- */
+.site-footer {
+  text-align: center;
+  padding-block: 32px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-ink-muted);
+}
