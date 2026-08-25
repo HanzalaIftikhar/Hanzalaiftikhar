@@ -8,18 +8,14 @@
 <meta name="theme-color" content="#1F6F54">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-<!-- Social preview (LinkedIn / Twitter / etc.) -->
 <meta property="og:title" content="Hanzala — AI-Powered Tools & Data Solutions">
 <meta property="og:description" content="AI-powered tools and data automation — from AI assistants to practical business software.">
 <meta property="og:type" content="website">
-<!-- 🔧 EDIT ME: swap for your real deployed URL once it's live -->
 <meta property="og:url" content="https://hanzalaiftikhar.github.io/Hanzalaiftikhar/">
 <meta name="twitter:card" content="summary">
-<!-- 🔧 Optional polish: add a 1200x630 og-image.png later, then uncomment —
+<!-- add a 1200x630 og-image.png later if you want a rich preview image, then uncomment
 <meta property="og:image" content="og-image.png"> -->
 
-
-<!-- Fonts: Fraunces (headings) + Inter (body) + IBM Plex Mono (tags/numbers) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -28,167 +24,174 @@
 </head>
 <body>
 
-<header class="site-header" id="top">
-  <div class="header-inner">
-    <a href="#top" class="logo">Hanzala<span class="logo-dot">.</span></a>
+<div class="page">
+  <div class="receipt" id="top">
+    <div class="receipt-edge" aria-hidden="true"></div>
 
-    <nav class="nav-desktop" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact" class="nav-cta">Contact</a>
-    </nav>
+    <div class="receipt-body">
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
-      <span></span><span></span><span></span>
-    </button>
+      <header class="receipt-header">
+        <p class="receipt-meta">Lahore, Pakistan — Portfolio</p>
+        <nav class="receipt-nav" aria-label="Primary">
+          <a href="#about">01 About</a>
+          <a href="#projects">02 Projects</a>
+          <a href="#skills">03 Skills</a>
+          <a href="#contact">04 Contact</a>
+        </nav>
+      </header>
+
+      <main>
+
+        <section id="hero" class="hero">
+          <span class="receipt-no">№ 2026-001</span>
+          <p class="eyebrow">— AI-powered tools for real problems —</p>
+          <h1 class="hero-name">Hanzala</h1>
+          <p class="hero-tagline">I build AI-powered tools that solve real problems.</p>
+
+          <!-- point this at whichever live project you want to lead with -->
+          <a href="https://your-live-demo-link.com" target="_blank" rel="noopener" class="btn btn-primary">
+            See the AI Sales Assistant live →
+          </a>
+        </section>
+
+        <section id="about" class="about">
+          <div class="section-label">
+            <span class="line-no">01</span>
+            <h2>About</h2>
+          </div>
+          <p class="about-text">
+            Final-year Computer Science student and AI-assisted builder — I move fast from idea to working product using modern AI tooling, and I understand these systems well enough to debug, extend, and ship them with confidence. My focus is practical: AI and data tools that solve real problems, not proof-of-concept demos that never leave the lab.
+          </p>
+        </section>
+
+        <section id="projects" class="projects">
+          <div class="section-label">
+            <span class="line-no">02</span>
+            <h2>Projects</h2>
+          </div>
+
+          <div class="ledger-item">
+            <div class="ledger-item-head">
+              <span class="ledger-index">01</span>
+              <h3 class="project-title">AI Sales Chat Assistant</h3>
+              <span class="status-tag status-built">Built</span>
+            </div>
+            <p class="project-desc">
+              A conversational assistant that lets e-commerce sellers ask questions about their sales data in plain English — built for fast responses with Groq-powered inference.
+            </p>
+            <ul class="tag-list">
+              <li class="tag">Python</li>
+              <li class="tag">Streamlit</li>
+              <li class="tag">Groq</li>
+              <li class="tag">Pandas</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://your-live-demo-link.com" target="_blank" rel="noopener" class="project-link">Live Demo →</a>
+              <a href="https://github.com/your-username/your-repo" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+            </div>
+          </div>
+
+          <div class="ledger-item">
+            <div class="ledger-item-head">
+              <span class="ledger-index">02</span>
+              <h3 class="project-title">Intelligent Diabetes Risk Predictor</h3>
+              <span class="status-tag status-built">Built</span>
+            </div>
+            <p class="project-desc">
+              An end-to-end ML app that predicts diabetes risk from clinical data. Benchmarked SVM, Random Forest, and Logistic Regression, used SMOTE for class balancing, and shipped a Flask backend with a multi-page Streamlit UI showing risk level and health suggestions.
+            </p>
+            <ul class="tag-list">
+              <li class="tag">Python</li>
+              <li class="tag">Flask</li>
+              <li class="tag">Scikit-learn</li>
+              <li class="tag">Streamlit</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://your-live-demo-link.com" target="_blank" rel="noopener" class="project-link">Live Demo →</a>
+              <a href="https://github.com/your-username/your-repo" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+            </div>
+          </div>
+
+          <div class="ledger-item">
+            <div class="ledger-item-head">
+              <span class="ledger-index">03</span>
+              <h3 class="project-title">AI Cart Recovery Agent</h3>
+              <span class="status-tag status-wip">In progress</span>
+            </div>
+            <p class="project-desc">
+              An agent that follows up on abandoned carts with personalized, context-aware messages — currently in development.
+            </p>
+            <ul class="tag-list">
+              <li class="tag">Python</li>
+              <li class="tag">LLM APIs</li>
+            </ul>
+            <div class="project-links">
+              <a href="#" class="project-link project-link-disabled">Live Demo — coming soon</a>
+              <a href="#" class="project-link project-link-disabled">GitHub — coming soon</a>
+            </div>
+          </div>
+
+        </section>
+
+        <section id="skills" class="skills">
+          <div class="section-label">
+            <span class="line-no">03</span>
+            <h2>Skills</h2>
+          </div>
+          <ul class="skills-list">
+            <li><span>Python</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
+            <li><span>Pandas</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
+            <li><span>NumPy</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
+            <li><span>SQL</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
+            <li><span>Scikit-learn</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
+            <li><span>Flask</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
+            <li><span>Streamlit</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
+            <li><span>LLM APIs</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
+            <li><span>Function Calling</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
+            <li><span>Git</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
+          </ul>
+        </section>
+
+        <section id="contact" class="contact">
+          <div class="section-label">
+            <span class="line-no">04</span>
+            <h2>Contact</h2>
+          </div>
+
+          <p class="receipt-totals">3 Projects · 10 Skills · Status: Open for work</p>
+          <p class="contact-line">Have an idea worth building? I'd love to hear about it.</p>
+
+          <div class="contact-links">
+            <a href="mailto:ranahanzala327@gmail.com" class="contact-btn">
+              <span class="contact-icon">@</span>
+              <span class="contact-label">Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/hanzala-iftikhar-783149213/" target="_blank" rel="noopener" class="contact-btn">
+              <span class="contact-icon">in</span>
+              <span class="contact-label">LinkedIn</span>
+            </a>
+            <a href="https://github.com/HanzalaIftikhar" target="_blank" rel="noopener" class="contact-btn">
+              <span class="contact-icon">GH</span>
+              <span class="contact-label">GitHub</span>
+            </a>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="receipt-footer">
+        <div class="receipt-barcode" aria-hidden="true"></div>
+        <p class="thank-you">— thank you for stopping by —</p>
+        <p class="footer-meta">© 2026 Hanzala. Built with HTML, CSS &amp; JS.</p>
+      </footer>
+
+    </div>
+
+    <div class="receipt-edge receipt-edge-bottom" aria-hidden="true"></div>
   </div>
 
-  <nav class="nav-mobile" id="mobileNav" aria-label="Mobile">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<main>
-
-  <!-- ============ HERO ============ -->
-  <section id="hero" class="hero">
-    <div class="hero-inner">
-      <p class="eyebrow">— AI-POWERED TOOLS FOR REAL PROBLEMS —</p>
-      <h1 class="hero-name">Hanzala</h1>
-      <p class="hero-tagline">I build AI-powered tools that solve real problems.</p>
-
-      <!-- 🔧 EDIT ME: point this at your featured project's live demo -->
-      <a href="https://ai-data-chat-dashboard-sx7ghgx8i7vmlncmtlwpof.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">
-        See the AI Sales Assistant live →
-      </a>
-    </div>
-    <div class="hero-divider" aria-hidden="true"></div>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section id="about" class="about">
-    <div class="section-inner">
-      <div class="section-label">
-        <span class="line-no">01</span>
-        <h2>About</h2>
-        <span class="rule" aria-hidden="true"></span>
-      </div>
-      <!-- 🔧 EDIT ME: swap this bio any time -->
-      <p class="about-text">
-        Final-year Computer Science student and AI-assisted builder — I move fast from idea to working product using modern AI tooling, and I understand these systems well enough to debug, extend, and ship them with confidence. My focus is practical: AI and data tools that solve real problems, not proof-of-concept demos that never leave the lab.
-      </p>
-    </div>
-  </section>
-
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects" class="projects">
-    <div class="section-inner">
-      <div class="section-label">
-        <span class="line-no">02</span>
-        <h2>Projects</h2>
-        <span class="rule" aria-hidden="true"></span>
-      </div>
-
-      <div class="project-grid">
-
-        <!-- 🔧 EDIT ME: Project 1 — swap description + links for the real ones -->
-        <article class="project-card">
-          <h3 class="project-title">AI Sales Chat Assistant</h3>
-          <p class="project-desc">
-            A conversational assistant that lets e-commerce sellers ask questions about their sales data in plain English — built for fast responses with Groq-powered inference.
-          </p>
-          <ul class="tag-list">
-            <li class="tag">Python</li>
-            <li class="tag">Streamlit</li>
-            <li class="tag">Groq</li>
-            <li class="tag">Pandas</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://your-live-demo-link.com" target="_blank" rel="noopener" class="project-link">Live Demo →</a>
-            <a href="https://github.com/your-username/your-repo" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
-          </div>
-        </article>
-
-        <!-- 🔧 EDIT ME: Project 2 — placeholder until this one is built -->
-        <article class="project-card">
-          <h3 class="project-title">AI Cart Recovery Agent</h3>
-          <p class="project-desc">
-            An agent that follows up on abandoned carts with personalized, context-aware messages — currently in development.
-          </p>
-          <ul class="tag-list">
-            <li class="tag">Python</li>
-            <li class="tag">LLM APIs</li>
-          </ul>
-          <div class="project-links">
-            <a href="#" class="project-link project-link-disabled">Live Demo — coming soon</a>
-            <a href="#" class="project-link project-link-disabled">GitHub — coming soon</a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SKILLS ============ -->
-  <section id="skills" class="skills">
-    <div class="section-inner">
-      <div class="section-label">
-        <span class="line-no">03</span>
-        <h2>Skills</h2>
-        <span class="rule" aria-hidden="true"></span>
-      </div>
-      <!-- 🔧 EDIT ME: add/remove <li> items as your stack changes -->
-      <ul class="tag-list skills-list">
-        <li class="tag">Python</li>
-        <li class="tag">Pandas</li>
-        <li class="tag">NumPy</li>
-        <li class="tag">SQL</li>
-        <li class="tag">Streamlit</li>
-        <li class="tag">LLM APIs</li>
-        <li class="tag">Function Calling</li>
-        <li class="tag">Git</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section id="contact" class="contact">
-    <div class="section-inner">
-      <div class="section-label">
-        <span class="line-no">04</span>
-        <h2>Contact</h2>
-        <span class="rule" aria-hidden="true"></span>
-      </div>
-
-      <p class="contact-line">Have an idea worth building? I'd love to hear about it.</p>
-
-      <!-- 🔧 EDIT ME: swap the three href values for your real email / LinkedIn / GitHub -->
-      <div class="contact-links">
-        <a href="mailto:you@example.com" class="contact-btn">
-          <span class="contact-icon">@</span>
-          <span class="contact-label">Email</span>
-        </a>
-        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" class="contact-btn">
-          <span class="contact-icon">in</span>
-          <span class="contact-label">LinkedIn</span>
-        </a>
-        <a href="https://github.com/your-username" target="_blank" rel="noopener" class="contact-btn">
-          <span class="contact-icon">GH</span>
-          <span class="contact-label">GitHub</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <p>&copy; 2026 Hanzala. Built with HTML, CSS &amp; JS.</p>
-</footer>
+  <a href="#top" class="back-to-top">↑ Back to top</a>
+</div>
 
 <script src="script.js"></script>
 </body>
