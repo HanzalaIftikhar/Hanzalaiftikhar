@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hanzala — AI-Powered Tools & Data Solutions</title>
-<meta name="description" content="Hanzala builds AI-powered tools and data automation — from AI assistants to practical business software.">
+<title>Hanzala — Automated Sales Reports & AI Tools for E-commerce</title>
+<meta name="description" content="Hanzala turns messy e-commerce sales data into automated weekly reports, dashboards, and AI sales assistants. Python, SQL, n8n, LLM APIs.">
 <meta name="theme-color" content="#1F6F54">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-<meta property="og:title" content="Hanzala — AI-Powered Tools & Data Solutions">
-<meta property="og:description" content="AI-powered tools and data automation — from AI assistants to practical business software.">
+<meta property="og:title" content="Hanzala — Automated Sales Reports & AI Tools for E-commerce">
+<meta property="og:description" content="Messy sales data in, clear weekly report and AI sales assistant out. Python, SQL, n8n, LLM APIs.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hanzalaiftikhar.github.io/Hanzalaiftikhar/">
 <meta name="twitter:card" content="summary">
@@ -34,9 +34,10 @@
         <p class="receipt-meta">Lahore, Pakistan — Portfolio</p>
         <nav class="receipt-nav" aria-label="Primary">
           <a href="#about">01 About</a>
-          <a href="#projects">02 Projects</a>
-          <a href="#skills">03 Skills</a>
-          <a href="#contact">04 Contact</a>
+          <a href="#services">02 Services</a>
+          <a href="#projects">03 Projects</a>
+          <a href="#skills">04 Skills</a>
+          <a href="#contact">05 Contact</a>
         </nav>
       </header>
 
@@ -44,13 +45,15 @@
 
         <section id="hero" class="hero">
           <span class="receipt-no">№ 2026-001</span>
-          <p class="eyebrow">— AI-powered tools for real problems —</p>
+          <p class="eyebrow">— Data &amp; AI automation for e-commerce —</p>
           <h1 class="hero-name">Hanzala</h1>
-          <p class="hero-tagline">I build AI-powered tools that solve real problems.</p>
+          <p class="hero-tagline">I turn messy sales data into automated weekly reports and AI assistants for online stores.</p>
 
-          <!-- point this at whichever live project you want to lead with -->
-          <a href="https://your-live-demo-link.com" target="_blank" rel="noopener" class="btn btn-primary">
-            See the AI Sales Assistant live →
+          <!-- TODO: once the AI Sales Assistant demo is deployed, change this to
+               href="YOUR_STREAMLIT_URL" target="_blank" rel="noopener"
+               and the label to "See the AI Sales Assistant live →" -->
+          <a href="#projects" class="btn btn-primary">
+            See my projects →
           </a>
         </section>
 
@@ -60,13 +63,50 @@
             <h2>About</h2>
           </div>
           <p class="about-text">
-            Final-year Computer Science student and AI-assisted builder — I move fast from idea to working product using modern AI tooling, and I understand these systems well enough to debug, extend, and ship them with confidence. My focus is practical: AI and data tools that solve real problems, not proof-of-concept demos that never leave the lab.
+            Computer Science student and data-automation builder based in Lahore, working remotely with online sellers. I clean up messy store exports, automate the reporting, and build AI assistants that answer questions about sales — using Python, SQL, n8n and LLM APIs. I use modern AI tooling to ship fast, and I check every number before it reaches a client.
           </p>
+        </section>
+
+        <section id="services" class="projects">
+          <div class="section-label">
+            <span class="line-no">02</span>
+            <h2>What I do</h2>
+          </div>
+
+          <div class="ledger-item">
+            <div class="ledger-item-head">
+              <span class="ledger-index">01</span>
+              <h3 class="project-title">Automated weekly sales report</h3>
+            </div>
+            <p class="project-desc">
+              Your order export goes in; a cleaned, summarized report with plain-English insights lands in your inbox every week. No more Monday mornings in spreadsheets.
+            </p>
+          </div>
+
+          <div class="ledger-item">
+            <div class="ledger-item-head">
+              <span class="ledger-index">02</span>
+              <h3 class="project-title">Data cleaning &amp; dashboards</h3>
+            </div>
+            <p class="project-desc">
+              Duplicates, mixed date formats, inconsistent categories and missing values fixed once and for good, then shown in one clear dashboard.
+            </p>
+          </div>
+
+          <div class="ledger-item">
+            <div class="ledger-item-head">
+              <span class="ledger-index">03</span>
+              <h3 class="project-title">AI sales assistant</h3>
+            </div>
+            <p class="project-desc">
+              Ask your own sales data questions in plain English, like "which products are driving returns?", and get an answer in seconds.
+            </p>
+          </div>
         </section>
 
         <section id="projects" class="projects">
           <div class="section-label">
-            <span class="line-no">02</span>
+            <span class="line-no">03</span>
             <h2>Projects</h2>
           </div>
 
@@ -86,8 +126,12 @@
               <li class="tag">Pandas</li>
             </ul>
             <div class="project-links">
-              <a href="https://your-live-demo-link.com" target="_blank" rel="noopener" class="project-link">Live Demo →</a>
-              <a href="https://github.com/your-username/your-repo" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+              <!-- TODO: deploy on Streamlit Community Cloud, then replace this line with:
+                   <a href="YOUR_STREAMLIT_URL" target="_blank" rel="noopener" class="project-link">Live Demo →</a> -->
+              <a href="#" class="project-link project-link-disabled">Live Demo — coming soon</a>
+              <!-- TODO: replace with the real repo URL:
+                   <a href="https://github.com/HanzalaIftikhar/YOUR_REPO_NAME" target="_blank" rel="noopener" class="project-link">GitHub ↗</a> -->
+              <a href="#" class="project-link project-link-disabled">GitHub — coming soon</a>
             </div>
           </div>
 
@@ -98,7 +142,7 @@
               <span class="status-tag status-built">Built</span>
             </div>
             <p class="project-desc">
-              An end-to-end ML app that predicts diabetes risk from clinical data. Benchmarked SVM, Random Forest, and Logistic Regression, used SMOTE for class balancing, and shipped a Flask backend with a multi-page Streamlit UI showing risk level and health suggestions.
+              An end-to-end ML app that predicts diabetes risk from clinical data. Benchmarked SVM, Random Forest, and Logistic Regression, used SMOTE for class balancing (final model: 76.3% recall), and shipped a Flask backend with a multi-page Streamlit UI showing risk level and health suggestions.
             </p>
             <ul class="tag-list">
               <li class="tag">Python</li>
@@ -107,26 +151,32 @@
               <li class="tag">Streamlit</li>
             </ul>
             <div class="project-links">
-              <a href="https://your-live-demo-link.com" target="_blank" rel="noopener" class="project-link">Live Demo →</a>
-              <a href="https://github.com/your-username/your-repo" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+              <!-- TODO: deploy the Streamlit version, then replace this line with:
+                   <a href="YOUR_STREAMLIT_URL" target="_blank" rel="noopener" class="project-link">Live Demo →</a> -->
+              <a href="#" class="project-link project-link-disabled">Live Demo — coming soon</a>
+              <a href="https://github.com/HanzalaIftikhar/intelligent-diabetes-risk-predictor" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
             </div>
           </div>
 
           <div class="ledger-item">
             <div class="ledger-item-head">
               <span class="ledger-index">03</span>
-              <h3 class="project-title">AI Cart Recovery Agent</h3>
+              <h3 class="project-title">Automated Sales Report (n8n + Python)</h3>
               <span class="status-tag status-wip">In progress</span>
             </div>
             <p class="project-desc">
-              An agent that follows up on abandoned carts with personalized, context-aware messages — currently in development.
+              A workflow that takes a messy e-commerce order export, cleans it with Pandas, computes weekly metrics, has an LLM write the insights, and emails the report — with a Streamlit dashboard alongside.
             </p>
             <ul class="tag-list">
+              <li class="tag">n8n</li>
               <li class="tag">Python</li>
+              <li class="tag">Pandas</li>
               <li class="tag">LLM APIs</li>
             </ul>
             <div class="project-links">
               <a href="#" class="project-link project-link-disabled">Live Demo — coming soon</a>
+              <!-- TODO: once the auto-sales-report repo exists, replace this line with:
+                   <a href="https://github.com/HanzalaIftikhar/auto-sales-report" target="_blank" rel="noopener" class="project-link">GitHub ↗</a> -->
               <a href="#" class="project-link project-link-disabled">GitHub — coming soon</a>
             </div>
           </div>
@@ -135,31 +185,31 @@
 
         <section id="skills" class="skills">
           <div class="section-label">
-            <span class="line-no">03</span>
+            <span class="line-no">04</span>
             <h2>Skills</h2>
           </div>
           <ul class="skills-list">
-            <li><span>Python</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
-            <li><span>Pandas</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
-            <li><span>NumPy</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
-            <li><span>SQL</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
-            <li><span>Scikit-learn</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
-            <li><span>Flask</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
-            <li><span>Streamlit</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
-            <li><span>LLM APIs</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
-            <li><span>Function Calling</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
-            <li><span>Git</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">1×</span></li>
+            <li><span>Python</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">Language</span></li>
+            <li><span>SQL</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">Data</span></li>
+            <li><span>Pandas &amp; NumPy</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">Data</span></li>
+            <li><span>n8n</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">Automation</span></li>
+            <li><span>LLM APIs &amp; Function Calling</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">AI</span></li>
+            <li><span>Scikit-learn</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">ML</span></li>
+            <li><span>Streamlit</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">Dashboards</span></li>
+            <li><span>Flask</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">Backend</span></li>
+            <li><span>Excel</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">Reporting</span></li>
+            <li><span>Git</span><span class="skill-leader" aria-hidden="true"></span><span class="skill-qty">Tooling</span></li>
           </ul>
         </section>
 
         <section id="contact" class="contact">
           <div class="section-label">
-            <span class="line-no">04</span>
+            <span class="line-no">05</span>
             <h2>Contact</h2>
           </div>
 
-          <p class="receipt-totals">3 Projects · 10 Skills · Status: Open for work</p>
-          <p class="contact-line">Have an idea worth building? I'd love to hear about it.</p>
+          <p class="receipt-totals">3 Projects · 3 Services · Status: Open for work</p>
+          <p class="contact-line">Is your store drowning in spreadsheets? Tell me about it — I reply fast and I'm happy to work US/UK hours.</p>
 
           <div class="contact-links">
             <a href="mailto:ranahanzala327@gmail.com" class="contact-btn">
